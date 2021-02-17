@@ -2,6 +2,7 @@ package com.hezhan.redisdemo.util;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -11,9 +12,11 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * Redis工具类
  * @Author Zhanzhan
  * @Date 2021/2/16 16:15
  **/
+@Component
 public class RedisUtil {
 
     @Resource
