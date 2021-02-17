@@ -285,9 +285,9 @@ public class RedisUtil {
     /**
      * <p>Set类型</p>
      * 将缓存数据放入指定的key中，并设置过期时间，单位为秒
-     * @param key
-     * @param time
-     * @param values
+     * @param key 缓存key
+     * @param time 过期时间
+     * @param values 要放入缓存的数据
      * @return
      */
     public Long sSet(String key, long time, Object... values) {
@@ -380,8 +380,8 @@ public class RedisUtil {
     /**
      * <p>List类型</p>
      * 将值从右侧放入List类型的缓存中，尾插法
-     * @param key
-     * @param value
+     * @param key 缓存key
+     * @param value 要放入缓存的值
      */
     public void rSet(String key, Object value) {
         redisTemplate.opsForList().rightPush(key, value);
@@ -581,8 +581,8 @@ public class RedisUtil {
     /**
      * <p>ZSet类型</p>
      * 获取指定key的ZSet集合中指定scores的元素
-     * @param key
-     * @param scores
+     * @param key 缓存key
+     * @param scores 值的scores,根据此值的大小来排序
      * @return
      */
     public Object zScores(String key, double scores) {
