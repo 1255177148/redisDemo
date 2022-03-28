@@ -23,6 +23,15 @@ public class RedisUtil {
     private RedisTemplate<String, Object> redisTemplate;
 
     /**
+     * 获取符合要求的所有key
+     * @param patternKey 指定要求的key
+     * @return 获取符合要求的所有key集合
+     */
+    public Set<String> getAllKey(String patternKey){
+        return redisTemplate.keys(patternKey);
+    }
+
+    /**
      * 清空所有的redis数据库
      */
     public void flushAll(){
